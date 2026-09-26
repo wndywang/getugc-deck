@@ -1690,29 +1690,27 @@ html, body {
 .mv .rv { opacity:0; transform:translateY(22px); transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); transition-delay:var(--d,0s); }
 .mv.on .rv { opacity:1; transform:none; }
 
-/* ---- slide 9: Meevee brand ---- */
-.mv.mvb { background:#FFFBF4; color:#1E1E1E; overflow:hidden; }
-.mvb .blob { position:absolute; border-radius:50%; filter:blur(2px); }
-.mvb .blob.sky { width:34vw; height:34vw; background:#59CBFF; opacity:.5; top:-14vw; right:-9vw; }
-.mvb .blob.mint { width:24vw; height:24vw; background:#89FFBF; opacity:.45; bottom:-12vw; left:-8vw; }
-.mvb .blob.sun { width:9vw; height:9vw; background:#FFD965; opacity:.7; bottom:16vh; right:30vw; }
+/* ---- slide 9: Meevee brand, dark TV look from the creator brief ---- */
+.mv.mvb { background:linear-gradient(180deg,#161616,#101010); color:#FFFBF4; overflow:hidden; }
+.mvb .grid { position:absolute; inset:0; pointer-events:none; background:linear-gradient(to right,rgba(150,190,235,.10) 1px,transparent 1px),linear-gradient(to bottom,rgba(150,190,235,.10) 1px,transparent 1px); background-size:clamp(40px,5.5vw,80px) clamp(40px,5.5vw,80px); }
+.mvb .glow { position:absolute; width:38vw; height:38vw; right:4vw; top:12vh; border-radius:50%; background:radial-gradient(circle,rgba(232,129,58,.34),rgba(232,129,58,0) 65%); pointer-events:none; }
 .mvb .top { display:flex; align-items:center; gap:16px; margin-bottom:4vh; position:relative; }
 .mvb .top img { height:clamp(34px,4.2vw,58px); width:auto; display:block; }
-.mvb .top .x { font-family:'JetBrains Mono',ui-monospace,Menlo,monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:#8E877D; }
+.mvb .top .x { font-family:'JetBrains Mono',ui-monospace,Menlo,monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,251,244,.45); }
 .mvb .dash { display:flex; gap:7px; margin-bottom:2.4vh; }
 .mvb .dash i { width:34px; height:8px; border-radius:6px; display:block; }
-.mvb .hh { font-family:ApfelGrotezk,Inter,sans-serif; font-weight:900; font-size:clamp(34px,4.7vw,74px); letter-spacing:-.03em; line-height:1.02; color:#1E1E1E; }
-.mvb .hh mark { white-space:nowrap; background:#FBFF4B; color:#1E1E1E; padding:0 .12em; border-radius:6px; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
-.mvb .ld { font-family:ApfelGrotezk,Inter,sans-serif; font-weight:500; font-size:clamp(15px,1.4vw,20px); color:#55504A; line-height:1.45; max-width:30em; margin-top:2.8vh; }
-.mvb .ld b { color:#1E1E1E; font-weight:900; }
-.mvb .mook { width:clamp(220px,26vw,400px); height:auto; filter:drop-shadow(0 30px 40px rgba(85,80,74,.22)); animation:mvbob 5s ease-in-out infinite; }
+.mvb .hh { font-family:ApfelGrotezk,Inter,sans-serif; font-weight:900; font-size:clamp(34px,4.7vw,74px); letter-spacing:-.03em; line-height:1.02; color:#FFFBF4; }
+.mvb .hh mark { white-space:nowrap; background:linear-gradient(180deg,#fad86c,#f2c64c 55%,#dcab37); color:#2a2724; padding:0 .12em; border-radius:8px; box-shadow:0 0 28px rgba(242,198,76,.25); }
+.mvb .ld { font-family:ApfelGrotezk,Inter,sans-serif; font-weight:500; font-size:clamp(15px,1.4vw,20px); color:rgba(255,251,244,.66); line-height:1.45; max-width:30em; margin-top:2.8vh; }
+.mvb .ld b { color:#FFFBF4; font-weight:900; }
+.mvb .mook { width:clamp(220px,26vw,400px); height:auto; filter:drop-shadow(0 30px 40px rgba(0,0,0,.55)); animation:mvbob 5s ease-in-out infinite; }
 @keyframes mvbob { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-14px) rotate(2deg)} }
-.mvb .probs { display:flex; gap:3vw; margin-top:5.5vh; position:relative; }
-.mvb .probs div { flex:1; background:#fff; border:1px solid #E8DFCF; border-radius:18px; padding:16px 18px; font-family:ApfelGrotezk,Inter,sans-serif; font-weight:500; font-size:clamp(12px,1.05vw,15px); color:#55504A; line-height:1.45; box-shadow:0 10px 30px rgba(85,80,74,.06); }
-.mvb .probs b { display:block; color:#1E1E1E; font-weight:900; font-size:1.12em; margin-bottom:4px; }
+.mvb .probs { display:flex; gap:2.4vw; margin-top:5.5vh; position:relative; }
+.mvb .probs div { flex:1; position:relative; overflow:hidden; background:linear-gradient(180deg,#e6e1d8,#d3cdc2); border-radius:18px; padding:16px 18px; font-family:ApfelGrotezk,Inter,sans-serif; font-weight:500; font-size:clamp(12px,1.05vw,15px); color:rgba(42,39,36,.72); line-height:1.45; box-shadow:0 0 2px rgba(0,0,0,.06),0 12px 16px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.5); }
+.mvb .probs b { display:block; color:#2a2724; font-weight:900; font-size:1.12em; margin-bottom:4px; }
 .mvb .probs .n { display:inline-block; width:22px; height:22px; border-radius:50%; color:#fff; font-size:11px; font-weight:900; text-align:center; line-height:22px; margin-bottom:8px; font-family:Inter,sans-serif; }
-.mvb .probs em { display:block; margin-top:6px; color:#1E1E1E; font-style:italic; }
-.mvb .teaser { color:#8E877D; } .mvb .teaser .arr { color:#F8763E; }
+.mvb .probs em { display:block; margin-top:6px; color:#2a2724; font-style:italic; }
+.mvb .teaser { color:rgba(255,251,244,.4); } .mvb .teaser .arr { color:#f2c64c; }
 
 /* ---- slide 10: what we built + the parents ---- */
 .mv-row { display:flex; gap:4vw; align-items:center; }
@@ -1732,8 +1730,8 @@ html, body {
 
 <!-- 9 · THEIR WORLD: THE PROBLEM (Meevee brand) -->
 <section class="slide mv mvb">
-  <div class="blob sky"></div><div class="blob mint"></div><div class="blob sun"></div>
-  <div class="top rv"><img src="media/meevee/logo.svg" alt="Meevee"><span class="x">&times; GetUGC.io &middot; Case study</span></div>
+  <div class="grid"></div><div class="glow"></div>
+  <div class="top rv"><img src="media/meevee/logo-cream.svg" alt="Meevee"><span class="x">&times; GetUGC.io &middot; Case study</span></div>
   <div style="display:flex; align-items:center; gap:4vw; position:relative;">
     <div style="flex:1.5;">
       <div class="dash rv" style="--d:.05s"><i style="background:#EE4B44"></i><i style="background:#59CBFF"></i><i style="background:#FFD965"></i></div>
@@ -1748,7 +1746,7 @@ html, body {
     <div><span class="n" style="background:#F8763E">3</span><b>They tried creators themselves.</b>It worked, but it took all their time.<em>&ldquo;We didn't know how to do it at scale.&rdquo;</em></div>
   </div>
   <div class="teaser" onclick="goTo(9)">So we let parents sell it <span class="arr">&#8594;</span></div>
-  <div class="logo-mark dark">GetUGC<span class="tld">.io</span></div>
+  <div class="logo-mark">GetUGC<span class="tld">.io</span></div>
 </section>
 
 <!-- 10 · OUR WORK: WHAT WE BUILT + THE PARENTS (GetUGC style) -->
