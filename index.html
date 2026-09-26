@@ -1712,6 +1712,25 @@ html, body {
 .mvb .probs em { display:block; margin-top:6px; color:#2a2724; font-style:italic; }
 .mvb .teaser { color:rgba(255,251,244,.4); } .mvb .teaser .arr { color:#f2c64c; }
 
+.mv-link { text-decoration:none; color:inherit; cursor:pointer; display:block; }
+.mv-link .shot { transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s; }
+.mv-link:hover .shot { transform:rotate(0deg) scale(1.03); box-shadow:0 30px 60px rgba(0,0,0,.7), 0 0 0 2px #C8F135; }
+.mv-link .go { color:#C8F135; margin-left:6px; }
+.mv-card .panel { background:#0E0E0E; border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:14px 14px 10px; height:clamp(210px,33vh,290px); overflow:hidden; box-shadow:0 24px 50px rgba(0,0,0,.6); }
+.mv-card .ph { font-family:'JetBrains Mono',ui-monospace,Menlo,monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:#C8F135; margin-bottom:10px; }
+.mv-card .pp { display:flex; gap:10px; padding:8px 0; border-top:1px solid rgba(255,255,255,.08); font-size:clamp(11px,.9vw,13px); line-height:1.35; }
+.mv-card .pp:first-of-type { border-top:0; padding-top:0; }
+.mv-card .pp i { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:5px; }
+.mv-card .pp b { display:block; color:#fff; font-weight:700; }
+.mv-card .pp q { display:block; color:rgba(255,255,255,.85); font-style:italic; quotes:"\201C" "\201D"; }
+.mv-card .pp span { display:block; color:rgba(255,255,255,.45); }
+@media (max-height:820px){ .mv-card .pp span{display:none} .mv-card .hk:nth-of-type(4){display:none} .mv-card .cap b{font-size:13px} }
+.mv-card .hk { padding:7px 0; border-top:1px solid rgba(255,255,255,.08); font-size:clamp(11px,.9vw,13px); line-height:1.35; color:rgba(255,255,255,.85); }
+.mv-card .hk:first-of-type { border-top:0; padding-top:0; }
+.mv-card .hk em { display:inline-block; font-style:normal; font-size:9px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#000; background:#FFD965; border-radius:5px; padding:2px 6px; margin-right:7px; vertical-align:1px; }
+.mv-card .hk.cta em { background:#89FFBF; }
+.mv-card.mv-link .shot { aspect-ratio:auto; width:100%; height:clamp(210px,33vh,290px); }
+.mv-cards > * { flex:1 1 0 !important; width:0; min-width:0; }
 /* ---- slide 10: what we built + the parents ---- */
 .mv-row { display:flex; gap:4vw; align-items:center; }
 .mv-cards { display:flex; gap:2vw; margin-top:4vh; align-items:flex-start; }
@@ -1754,15 +1773,25 @@ html, body {
 <section class="slide mv">
   <div class="mv-row">
     <div style="flex:1; min-width:0;">
-      <div class="pill rv">How we solved it</div>
-      <div class="h rv" style="--d:.1s; font-size:clamp(30px,3.9vw,60px);">We found the line that sells it.<br><span class="l">Screen time that ends<br>without the meltdown.</span></div>
-      <div class="lede rv" style="--d:.2s"><b>Then we let real parents say it.</b> Mom to mom, dad to dad, in videos made to be saved and sent to the group chat.</div>
+      <div class="rv" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:2.4vh;"><div class="pill" style="margin:0;">How we solved it</div><span class="mono" style="color:rgba(255,255,255,.5);">15 videos &middot; 5 US parents &middot; <span style="color:#C8F135;">Round 2 scripts approved, zero edits</span></span></div>
+      <div class="h rv" style="--d:.1s; font-size:clamp(28px,3.3vw,52px);">We found the line that sells it.<br><span class="l">Screen time that ends<br>without the meltdown.</span></div>
+      <div class="lede rv" style="--d:.2s"><b>Then we let real parents say it,</b> mom to mom and dad to dad, in videos made to be saved and sent to the group chat.</div>
       <div class="mv-cards">
-        <div class="mv-card rv" style="--d:.3s"><div class="shot" style="--r:-2deg"><img src="media/meevee/strategy.jpg" alt="Creative strategy with three parent personas"></div><div class="cap"><span class="mono">Fix 1 &middot; Strategy</span><b>3 parent types, 3 reasons to switch.</b></div></div>
-        <div class="mv-card rv" style="--d:.4s"><div class="shot" style="--r:1.5deg"><img src="media/meevee/scripts.jpg" alt="Script with hook, points and CTA"></div><div class="cap"><span class="mono">Fix 2 &middot; Scripts</span><b>Many hooks, soft CTAs. Never feels like an ad.</b></div></div>
-        <div class="mv-card rv" style="--d:.5s"><div class="shot" style="--r:-1deg; background:#161616"><img src="media/meevee/brief.jpg" alt="Creator brief"></div><div class="cap"><span class="mono">Fix 3 &middot; Creator brief</span><b>We find, brief and film the parents. They just approve.</b></div></div>
+        <div class="mv-card rv" style="--d:.3s"><div class="panel">
+          <div class="ph">3 parent types</div>
+          <div class="pp"><i style="background:#FF4D8F"></i><div><b>The careful mom</b><q>Is this junk for her brain?</q><span>We open on the moment the guilt lifts.</span></div></div>
+          <div class="pp"><i style="background:#59CBFF"></i><div><b>The techy dad</b><q>Where's the catch?</q><span>He tries to break it, and can't.</span></div></div>
+          <div class="pp"><i style="background:#C8F135"></i><div><b>The single parent</b><q>I need 30 real minutes.</q><span>Filmed in the gap the app buys.</span></div></div>
+        </div><div class="cap"><span class="mono">Fix 1 &middot; Strategy</span><b>3 parent types, 3 reasons to switch.</b></div></div>
+        <div class="mv-card rv" style="--d:.4s"><div class="panel">
+          <div class="ph">Hooks, from the real scripts</div>
+          <div class="hk"><em>Hook</em>&ldquo;My kid came off the tablet and she was still herself. That's new.&rdquo;</div>
+          <div class="hk"><em>Hook</em>&ldquo;If you're the parent who actually reads the privacy policy, hi.&rdquo;</div>
+          <div class="hk"><em>Hook</em>&ldquo;Nobody told me you could put the whole thing on the TV. So I'm telling you.&rdquo;</div>
+          <div class="hk cta"><em>CTA</em>&ldquo;Save this for Saturday, dad to dad.&rdquo;</div>
+        </div><div class="cap"><span class="mono">Fix 2 &middot; Scripts</span><b>Many hooks, soft CTAs. Never feels like an ad.</b></div></div>
+        <a class="mv-card rv mv-link" style="--d:.5s" href="https://meevee-creator-brief.pages.dev" target="_blank" rel="noopener"><div class="shot" style="--r:-1deg; background:#161616"><img src="media/meevee/brief.jpg" alt="Creator brief"></div><div class="cap"><span class="mono">Fix 3 &middot; Creator brief <span class="go">Open &#8599;</span></span><b>We find, brief and film the parents. They just approve.</b></div></a>
       </div>
-      <div class="mono rv" style="--d:.6s; margin-top:3.6vh; color:rgba(255,255,255,.5);">15 videos &middot; 5 US parents &middot; <span style="color:#C8F135;">Round 2 scripts approved, zero edits</span></div>
     </div>
     <div class="mv-phones rv" style="--d:.35s">
       <div class="mv-phone" style="--r:-3deg"><video autoplay muted loop playsinline src="media/meevee/mom-claire.mp4"></video><div class="tg" style="background:#FF4D8F;color:#fff;">Mom to mom</div></div>
