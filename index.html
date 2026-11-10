@@ -1674,8 +1674,8 @@ html, body {
 
 
 <!-- ===========================================================
-     SLIDES 9 to 10: MEEVEE CASE STUDY
-     9 = their world, in Meevee's own brand (problem). 10 = our work, GetUGC keynote style.
+     SLIDES 9 to 11: MEEVEE CASE STUDY
+     9 = their world, in Meevee's own brand (problem). 10 = our work, GetUGC keynote style. 11 = round 2 (The Dial): winning hooks + D's quote.
      =========================================================== -->
 <style>
 @font-face{font-family:ApfelGrotezk;src:url(media/meevee/fonts/ApfelGrotezk-Mittel.woff2) format("woff2");font-weight:500;font-display:swap}
@@ -1745,6 +1745,20 @@ html, body {
 .mv-phone video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .mv-phone .tg { position:absolute; left:12px; bottom:12px; font-size:9px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; padding:5px 10px; border-radius:20px; }
 @media (max-height:820px){ .mv{padding-top:6vh;padding-bottom:12vh} .mvb .top{margin-bottom:2.6vh} .mvb .probs{margin-top:3.6vh} .mv-cards{margin-top:3vh} .mvb .dash{margin-bottom:1.6vh} }
+/* ---- slide 11: round 2, the hooks that worked + the client's words ---- */
+.mv-hooks { margin-top:2.6vh; max-width:40em; }
+.mv-hooks .hk { padding:9px 0; border-top:1px solid rgba(255,255,255,.08); font-size:clamp(12px,1vw,15px); line-height:1.4; color:rgba(255,255,255,.85); }
+.mv-hooks .hk:first-child { border-top:0; padding-top:0; }
+.mv-hooks .hk em { display:inline-block; font-style:normal; font-size:9px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#000; background:#FFD965; border-radius:5px; padding:2px 6px; margin-right:8px; vertical-align:1px; }
+.mv-quote { margin:3.4vh 0 0; max-width:40em; padding:18px 22px 16px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-left:3px solid #C8F135; border-radius:4px 14px 14px 4px; }
+.mv-quote p { font-size:clamp(12px,1vw,15px); color:rgba(255,255,255,.6); line-height:1.5; margin-top:10px; }
+.mv-quote p.big { font-size:clamp(15px,1.4vw,21px); color:#fff; font-weight:700; letter-spacing:-.01em; line-height:1.35; margin-top:0; }
+.mv-quote figcaption { margin-top:14px; font-family:'JetBrains Mono',ui-monospace,Menlo,monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.mv-quote figcaption b { color:#C8F135; font-weight:700; }
+.mv-phones3 { align-items:flex-start; }
+.mv-phones3 .mv-phone { width:clamp(118px,11vw,176px); }
+.mv-phones3 .mv-phone:nth-child(3) { margin-top:0; }
+@media (max-height:820px){ .mv-hooks{margin-top:1.8vh} .mv-quote{margin-top:2.2vh; padding:14px 18px 12px} }
 </style>
 
 <!-- 9 · THEIR WORLD: THE PROBLEM (Meevee brand) -->
@@ -1773,7 +1787,7 @@ html, body {
 <section class="slide mv">
   <div class="mv-row">
     <div style="flex:1; min-width:0;">
-      <div class="rv" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:2.4vh;"><div class="pill" style="margin:0;">How we solved it</div><span class="mono" style="color:rgba(255,255,255,.5);">15 videos &middot; 5 US parents &middot; <span style="color:#C8F135;">Round 2 scripts approved, zero edits</span></span></div>
+      <div class="rv" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:2.4vh;"><div class="pill" style="margin:0;">How we solved it</div><span class="mono" style="color:rgba(255,255,255,.5);">Round 1 &middot; 15 videos &middot; <span style="color:#C8F135;">5 US parents</span></span></div>
       <div class="h rv" style="--d:.1s; font-size:clamp(28px,3.3vw,52px);">We found the line that sells it.<br><span class="l">Screen time that ends<br>without the meltdown.</span></div>
       <div class="lede rv" style="--d:.2s"><b>Then we let real parents say it,</b> mom to mom and dad to dad, in videos made to be saved and sent to the group chat.</div>
       <div class="mv-cards">
@@ -1798,7 +1812,34 @@ html, body {
       <div class="mv-phone" style="--r:3deg"><video autoplay muted loop playsinline src="media/meevee/dad.mp4"></video><div class="tg" style="background:#C8F135;color:#000;">Dad to dad</div></div>
     </div>
   </div>
-  <div class="teaser" onclick="goTo(10)">Here's what it costs <span class="arr">&#8594;</span></div>
+  <div class="teaser" onclick="goTo(10)">Then came round 2 <span class="arr">&#8594;</span></div>
+  <div class="logo-mark">GetUGC<span class="tld">.io</span></div>
+</section>
+<!-- 11 · ROUND 2: THE DIAL, THE HOOKS THAT WORKED + D'S WORDS (GetUGC style) -->
+<section class="slide mv">
+  <div class="mv-row">
+    <div style="flex:1; min-width:0;">
+      <div class="rv" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:2.4vh;"><div class="pill" style="margin:0;">Round 2 &middot; The Dial</div><span class="mono" style="color:rgba(255,255,255,.5);">15 more videos &middot; 5 new creators &middot; <span style="color:#C8F135;">all 30 approved</span></span></div>
+      <div class="h rv" style="--d:.1s; font-size:clamp(28px,3.3vw,52px);">The Dial wasn't even out yet.<br><span class="l">We tested the hooks.<br>Two brought in the leads.</span></div>
+      <div class="mv-hooks rv" style="--d:.2s">
+        <div class="hk"><em>Skeptic</em>&ldquo;When I saw a sneak peek of this thing Meevee's working on, my first thought was: what's the catch?&rdquo;</div>
+        <div class="hk"><em>Prop</em>&ldquo;Every parent with one of those little story boxes has probably thought it. Why can't our TV work like this?&rdquo;</div>
+      </div>
+      <figure class="mv-quote rv" style="--d:.35s">
+        <blockquote>
+          <p class="big">&ldquo;We've done a big clean up of our Instagram based on your feedback&hellip; We've seen a big uptick in followers.&rdquo;</p>
+          <p>&ldquo;There's real signal in here that we're grateful for&hellip; that's going to shape our own creative going forward. Thanks so much for all the work on this, it's been helpful.&rdquo;</p>
+        </blockquote>
+        <figcaption><b>D Alcausin</b> &middot; Co-founder, Meevee</figcaption>
+      </figure>
+    </div>
+    <div class="mv-phones mv-phones3 rv" style="--d:.3s">
+      <div class="mv-phone" style="--r:-3deg"><video autoplay muted loop playsinline src="media/meevee/r2-catch.mp4"></video><div class="tg" style="background:#C8F135;color:#000;">Skeptic hook</div></div>
+      <div class="mv-phone" style="--r:2deg"><video autoplay muted loop playsinline src="media/meevee/r2-storybox.mp4"></video><div class="tg" style="background:#FF4D8F;color:#fff;">Story box hook</div></div>
+      <div class="mv-phone" style="--r:-2deg"><video autoplay muted loop playsinline src="media/meevee/r2-simple.mp4"></video><div class="tg" style="background:#59CBFF;color:#000;">Dad to dad</div></div>
+    </div>
+  </div>
+  <div class="teaser" onclick="goTo(11)">Here's what it costs <span class="arr">&#8594;</span></div>
   <div class="logo-mark">GetUGC<span class="tld">.io</span></div>
 </section>
 <script>
@@ -1887,7 +1928,7 @@ html, body {
     Rate locked for 12 months &nbsp;·&nbsp; No contracts, cancel anytime
   </div>
 
-  <div class="teaser" onclick="goTo(11)">Ready to try it? <span class="arr">&#8594;</span></div>
+  <div class="teaser" onclick="goTo(12)">Ready to try it? <span class="arr">&#8594;</span></div>
   <div class="logo-mark">GetUGC<span class="tld">.io</span></div>
 </section>
 
@@ -1945,7 +1986,7 @@ html, body {
 var goTo; // exposed globally for teaser onclick
 (function () {
   var current = 0;
-  var total   = 12;
+  var total   = 13;
   var deck    = document.getElementById('deck');
   var fill    = document.getElementById('progress');
   var ctr     = document.getElementById('counter');
